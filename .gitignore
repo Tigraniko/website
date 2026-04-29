@@ -1,3 +1,38 @@
-node_modules
-dist
+# Vercel
+.vercel/
+
+# Environment variables — NEVER commit secrets
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node (if ever added)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temp / build artifacts
+dist/
+build/
+.cache/
+tmp/

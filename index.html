@@ -1,12 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tigran Saakian Portfolio</title>
-  </head>
-  <body class="bg-gray-900 text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</title>
+  <meta name="description" content="Personal portfolio and project showcase." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☢</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div id="boot-content">
+      <div class="boot-line" id="bl1">ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL</div>
+      <div class="boot-line" id="bl2">ENTER PASSWORD NOW</div>
+      <div class="boot-line" id="bl3">> INITIALIZING BIOS...<span class="blink">_</span></div>
+      <div class="boot-line" id="bl4">> MEMORY CHECK: 64K OK</div>
+      <div class="boot-line" id="bl5">> LOADING SYSTEM FILES...</div>
+      <div class="boot-line" id="bl6">> VAULT-TEC SECURE NETWORK ESTABLISHED</div>
+      <div class="boot-line" id="bl7">> AUTHENTICATING USER... <span class="ok">[ OK ]</span></div>
+      <div class="boot-line" id="bl8">> DECRYPTING PERSONNEL FILE... <span class="ok">[ OK ]</span></div>
+      <div class="boot-line" id="bl9">> ALL SYSTEMS NOMINAL</div>
+      <div class="boot-line" id="bl10" style="margin-top:2rem;">WELCOME, OVERSEER.</div>
+      <div class="boot-line" id="bl11">ACCESSING SECURE PERSONNEL DOSSIER...</div>
+      <div id="boot-bar-wrapper">
+        <div id="boot-progress-label">> BOOT SEQUENCE: </div>
+        <div id="boot-bar-outer"><div id="boot-bar-inner"></div></div>
+        <div id="boot-pct">0%</div>
+      </div>
+      <div class="boot-line" id="bl12" style="display:none;margin-top:1.5rem;">> PRESS ANY KEY OR WAIT TO ENTER TERMINAL</div>
+    </div>
+  </div>
+
+  <!-- MAIN SITE -->
+  <div id="main-site" style="display:none;">
+    <!-- NUCLEAR SYMBOL (persistent, top-left) -->
+    <div id="nuclear-container">
+      <svg id="nuclear-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="10" fill="#00ff41"/>
+        <path d="M50 50 L50 5 A45 45 0 0 1 89.1 27.5 Z" fill="#00ff41"/>
+        <path d="M50 50 L89.1 72.5 A45 45 0 0 1 10.9 72.5 Z" fill="#00ff41"/>
+        <path d="M50 50 L10.9 27.5 A45 45 0 0 1 50 5 Z" fill="#00ff41"/>
+        <circle cx="50" cy="50" r="10" fill="#0a0f0a"/>
+        <circle cx="50" cy="50" r="4" fill="#00ff41"/>
+        <circle cx="50" cy="50" r="14" fill="none" stroke="#00ff41" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#00ff41" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- SCANLINE OVERLAY -->
+    <div id="scanlines"></div>
+    <div id="crt-vignette"></div>
+
+    <!-- HEADER -->
+    <header id="site-header">
+      <div id="header-left">
+        <div id="header-title">ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</div>
+        <div id="header-sub">COPYRIGHT 2075 ROBCO INDUSTRIES &nbsp;|&nbsp; -64K RAM SYSTEM- &nbsp;|&nbsp; TERMLINK v4.2.1</div>
+      </div>
+      <div id="header-right">
+        <span id="clock-label">SYS.TIME: </span><span id="live-clock">--:--:--</span>
+      </div>
+    </header>
+
+    <!-- NAV TABS -->
+    <nav id="tab-nav">
+      <button class="tab-btn active" data-tab="home">[ HOME ]</button>
+      <button class="tab-btn" data-tab="experience">[ EXPERIENCE ]</button>
+      <button class="tab-btn" data-tab="developing">[ DEVELOPING ]</button>
+    </nav>
+
+    <!-- DIVIDER -->
+    <div class="terminal-divider">================================================================================</div>
+
+    <!-- PAGE CONTENT -->
+    <main id="page-content">
+
+      <!-- HOME PAGE -->
+      <section id="tab-home" class="tab-section active">
+        <div class="section-header">&gt;&gt; PERSONNEL DOSSIER — CLASSIFIED</div>
+        <div class="glitch-name" data-text="TIGRANIKO">TIGRANIKO</div>
+        <div class="home-subtitle">SYSTEMS ANALYST / SECURITY OPERATIVE / DEVELOPER</div>
+        <div class="terminal-divider short">——————————————————————————————</div>
+        <div class="home-bio">
+          <p class="type-line">&gt; DESIGNATION: <span class="hl">TIGRANIKO</span></p>
+          <p class="type-line">&gt; CLEARANCE LEVEL: <span class="hl">AUTHORIZED</span></p>
+          <p class="type-line">&gt; SPECIALIZATION: <span class="hl">CYBERSECURITY // SYSTEMS HARDENING // DEVELOPMENT</span></p>
+          <p class="type-line">&gt; STATUS: <span class="hl blink-slow">OPERATIONAL ●</span></p>
+        </div>
+        <div class="terminal-divider short">——————————————————————————————</div>
+        <div class="home-intro-text">
+          <p>Welcome to my secure terminal interface. This dossier contains verified credentials, field operation reports, and active project manifests. Navigate via the tabs above to access classified sections.</p>
+          <p>All data is VAULT-TEC ENCRYPTED and maintained under active ROBCO TERMLINK PROTOCOL. Unauthorized access attempts are logged and reported to Vault Security.</p>
+        </div>
+        <div class="home-stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">CERTIFICATIONS</div>
+            <div class="stat-val">04</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">ACTIVE PROJECTS</div>
+            <div class="stat-val">02</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">COMPETITIONS</div>
+            <div class="stat-val">02</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">SEC CLEARANCE</div>
+            <div class="stat-val">S+</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE PAGE -->
+      <section id="tab-experience" class="tab-section">
+        <div class="section-header">&gt;&gt; CREDENTIALS &amp; FIELD OPERATIONS LOG</div>
+
+        <div class="exp-category-label">[ CERTIFICATIONS — COMPTIA DIVISION ]</div>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">☰</div>
+            <div class="cert-name">CompTIA A+</div>
+            <div class="cert-desc">Core hardware, software, and IT support fundamentals. Validates ability to troubleshoot, configure, and maintain IT infrastructure across platforms.</div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">⬡</div>
+            <div class="cert-name">CompTIA Network+</div>
+            <div class="cert-desc">Networking concepts, infrastructure, operations, security, and troubleshooting. Covers TCP/IP, protocols, routing, switching, and network defense.</div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">◈</div>
+            <div class="cert-name">CompTIA Security+</div>
+            <div class="cert-desc">Cybersecurity baseline — threat management, cryptography, identity management, network security, and risk mitigation. DoD 8570 compliant baseline certification.</div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">⬧</div>
+            <div class="cert-name">CompTIA CySA+</div>
+            <div class="cert-desc">Cybersecurity Analyst certification. Focuses on threat intelligence, vulnerability management, incident response, and security operations center (SOC) methodologies.</div>
+            <div class="cert-badge">VERIFIED</div>
+          </div>
+        </div>
+
+        <div class="terminal-divider short">——————————————————————————————</div>
+        <div class="exp-category-label">[ FIELD OPERATIONS — COMPETITION RECORD ]</div>
+
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <span class="exp-icon">◎</span>
+            <span class="exp-title">NATIONAL CYBER LEAGUE (NCL)</span>
+            <span class="exp-rank">TOP 10% PERFORMER — MULTI-YEAR</span>
+          </div>
+          <div class="exp-body">
+            <p class="exp-desc">The National Cyber League is a seasonal cybersecurity competition open to high school and college students across the United States, structured around the NICE Cybersecurity Workforce Framework. Each season includes an individual game and a team game, where participants tackle hands-on, performance-based challenges across a range of security domains. The competition attracts tens of thousands of students per season, making Top 10% placement a highly competitive distinction.</p>
+            <div class="exp-skills-label">&gt; SKILLS DEPLOYED:</div>
+            <ul class="exp-skills-list">
+              <li>Open-Source Intelligence (OSINT) — gathering and analyzing publicly available data to solve investigative challenges</li>
+              <li>Log Analysis — parsing and interpreting system, network, and application logs to identify anomalies and indicators of compromise</li>
+              <li>Network Traffic Analysis — dissecting packet captures using tools such as Wireshark to reconstruct events and identify threats</li>
+              <li>Cryptography — decrypting ciphers, hashes, and encoded data across classical and modern schemes</li>
+              <li>Web Application Security — identifying and exploiting common web vulnerabilities including injection flaws and authentication bypasses</li>
+              <li>Password Cracking — applying wordlist and rule-based attacks using tools such as Hashcat and John the Ripper</li>
+              <li>Forensics — recovering and analyzing artifacts from disk images, memory dumps, and file metadata</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-card-header">
+            <span class="exp-icon">◎</span>
+            <span class="exp-title">CYBERPATRIOT</span>
+            <span class="exp-rank">PLATINUM SEMIFINALIST — MULTI-YEAR</span>
+          </div>
+          <div class="exp-body">
+            <p class="exp-desc">CyberPatriot is the Air Force Association's premier national youth cyber defense competition, designed to inspire students toward careers in cybersecurity and other STEM disciplines. Teams compete by securing virtual operating system images — finding and fixing security vulnerabilities within a time-limited window. The competition spans multiple qualifying rounds, with Platinum division representing the highest tier of advancement short of the national finals. Multi-year Platinum Semifinalist status reflects sustained, high-level competitive performance across seasons.</p>
+            <div class="exp-skills-label">&gt; SKILLS DEPLOYED:</div>
+            <ul class="exp-skills-list">
+              <li>Windows OS Hardening — securing user accounts, enforcing Group Policy, disabling unnecessary services, and applying security configurations</li>
+              <li>Linux OS Hardening — managing permissions, configuring PAM, securing SSH, and auditing running services on Ubuntu and Debian-based systems</li>
+              <li>Service Enumeration and Removal — identifying unauthorized or vulnerable services and safely eliminating attack surface</li>
+              <li>User Account Management — auditing accounts, enforcing least privilege, and managing group memberships across operating systems</li>
+              <li>Firewall Configuration — applying rules via Windows Firewall and UFW/iptables to enforce network segmentation and access control</li>
+              <li>Competitive Time Management — triaging, prioritizing, and executing security tasks within strict time constraints as a team</li>
+              <li>Security Policy Implementation — applying organizational security standards to live systems under simulated adversarial conditions</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- DEVELOPING PAGE -->
+      <section id="tab-developing" class="tab-section">
+        <div class="section-header">&gt;&gt; ACTIVE PROJECT MANIFEST</div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">[SH]</span>
+            <span class="project-title">LINUX HARDENING AUTOMATION FRAMEWORK</span>
+            <span class="project-status status-active">● ACTIVE</span>
+          </div>
+          <div class="project-desc">
+            A comprehensive Bash-based automation framework designed to harden Linux systems against common attack vectors by systematically applying security best practices. The script executes a full security baseline with minimal manual intervention, making enterprise-grade hardening accessible and repeatable across deployments.
+          </div>
+          <div class="project-features-label">&gt; CORE MODULES:</div>
+          <ul class="project-features">
+            <li><span class="feat-tag">[USER MGT]</span> Automated user provisioning and account lifecycle management — enforces least-privilege principles, password policies, and secure account configurations</li>
+            <li><span class="feat-tag">[SERVICE]</span> Intelligent service audit and removal — detects and disables unnecessary or insecure services to minimize attack surface</li>
+            <li><span class="feat-tag">[VULN]</span> Common vulnerability scanner — probes installed programs and active services against known CVEs and misconfigurations</li>
+            <li><span class="feat-tag">[UPDATE]</span> Automated system and distribution updates — ensures the OS and all installed packages are patched against the latest known vulnerabilities</li>
+            <li><span class="feat-tag">[CONFIG]</span> Optimal update policy enforcement — configures unattended-upgrades and update schedules to maintain continuous patch compliance</li>
+            <li><span class="feat-tag">[INSTALL]</span> Curated security tool deployment — auto-installs a defined suite of hardening and monitoring utilities as part of the baseline build</li>
+          </ul>
+          <div class="project-tech">&gt; TECH STACK: <span class="hl">BASH // LINUX // CRON // APT // SYSTEMD</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">[WB]</span>
+            <span class="project-title">THIS TERMINAL — PERSONAL PORTFOLIO SITE</span>
+            <span class="project-status status-active">● ACTIVE</span>
+          </div>
+          <div class="project-desc">
+            You are interfacing with it now. A fully custom-designed personal portfolio built from the ground up with a Fallout-inspired ROBCO terminal aesthetic. Features a simulated boot sequence, CRT scanline effects, animated nuclear symbol, tab-based navigation, and responsive layout — all delivered as a static site with zero external runtime dependencies.
+          </div>
+          <div class="project-features-label">&gt; CORE MODULES:</div>
+          <ul class="project-features">
+            <li><span class="feat-tag">[DESIGN]</span> Fallout terminal aesthetic — custom CRT scanlines, phosphor-green palette, VT323 monospace typography, and glitch animations</li>
+            <li><span class="feat-tag">[UX]</span> Animated boot sequence — realistic terminal initialization with staggered output lines and a progress bar before content loads</li>
+            <li><span class="feat-tag">[NAV]</span> Tab-based SPA architecture — seamless section switching with no page reloads via vanilla JavaScript</li>
+            <li><span class="feat-tag">[PERF]</span> Zero-dependency static site — pure HTML, CSS, and JavaScript with no frameworks, ensuring maximum performance and portability</li>
+            <li><span class="feat-tag">[DEPLOY]</span> Continuous deployment via Vercel — automatic production builds triggered on push to the main branch</li>
+          </ul>
+          <div class="project-tech">&gt; TECH STACK: <span class="hl">HTML5 // CSS3 // VANILLA JS // VERCEL</span></div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="site-footer">
+      <div class="terminal-divider">================================================================================</div>
+      <div id="footer-text">&gt; ROBCO TERMLINK ACTIVE &nbsp;|&nbsp; VAULT-TEC CERTIFIED &nbsp;|&nbsp; ALL RIGHTS RESERVED 2075 &nbsp;|&nbsp; NODE: TIGRANIKO-01</div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>

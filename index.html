@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</title>
+  <title>TIGRANIKO INDUSTRIES UNIFIED OPERATING SYSTEM</title>
   <meta name="description" content="Personal portfolio and project showcase." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☢</text></svg>" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
@@ -22,32 +22,33 @@
       <div class="boot-line" id="bl7">> AUTHENTICATING USER... <span class="ok">[ OK ]</span></div>
       <div class="boot-line" id="bl8">> DECRYPTING PERSONNEL FILE... <span class="ok">[ OK ]</span></div>
       <div class="boot-line" id="bl9">> ALL SYSTEMS NOMINAL</div>
-      <div class="boot-line" id="bl10" style="margin-top:2rem;">WELCOME, OVERSEER.</div>
-      <div class="boot-line" id="bl11">ACCESSING SECURE PERSONNEL DOSSIER...</div>
+      <div class="boot-line" id="bl10" style="margin-top:2rem;">WELCOME.</div>
+      <div class="boot-line" id="bl11">ACCESSING FILES...</div>
       <div id="boot-bar-wrapper">
         <div id="boot-progress-label">> BOOT SEQUENCE: </div>
         <div id="boot-bar-outer"><div id="boot-bar-inner"></div></div>
         <div id="boot-pct">0%</div>
       </div>
-      <div class="boot-line" id="bl12" style="display:none;margin-top:1.5rem;">> PRESS ANY KEY OR WAIT TO ENTER TERMINAL</div>
+      <div class="boot-line" id="bl12" style="display:none;margin-top:1.5rem;">> PRESS ANY KEY OR WAIT TO ENTER</div>
     </div>
+  </div>
+
+  <!-- NUCLEAR SYMBOL (fixed, always visible) -->
+  <div id="nuclear-container">
+    <svg id="nuclear-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="10" fill="#00ff41"/>
+      <path d="M50 50 L50 5 A45 45 0 0 1 89.1 27.5 Z" fill="#00ff41"/>
+      <path d="M50 50 L89.1 72.5 A45 45 0 0 1 10.9 72.5 Z" fill="#00ff41"/>
+      <path d="M50 50 L10.9 27.5 A45 45 0 0 1 50 5 Z" fill="#00ff41"/>
+      <circle cx="50" cy="50" r="10" fill="#0a0f0a"/>
+      <circle cx="50" cy="50" r="4" fill="#00ff41"/>
+      <circle cx="50" cy="50" r="14" fill="none" stroke="#00ff41" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#00ff41" stroke-width="1"/>
+    </svg>
   </div>
 
   <!-- MAIN SITE -->
   <div id="main-site" style="display:none;">
-    <!-- NUCLEAR SYMBOL (persistent, top-left) -->
-    <div id="nuclear-container">
-      <svg id="nuclear-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="10" fill="#00ff41"/>
-        <path d="M50 50 L50 5 A45 45 0 0 1 89.1 27.5 Z" fill="#00ff41"/>
-        <path d="M50 50 L89.1 72.5 A45 45 0 0 1 10.9 72.5 Z" fill="#00ff41"/>
-        <path d="M50 50 L10.9 27.5 A45 45 0 0 1 50 5 Z" fill="#00ff41"/>
-        <circle cx="50" cy="50" r="10" fill="#0a0f0a"/>
-        <circle cx="50" cy="50" r="4" fill="#00ff41"/>
-        <circle cx="50" cy="50" r="14" fill="none" stroke="#00ff41" stroke-width="1.5"/>
-        <circle cx="50" cy="50" r="48" fill="none" stroke="#00ff41" stroke-width="1"/>
-      </svg>
-    </div>
 
     <!-- SCANLINE OVERLAY -->
     <div id="scanlines"></div>
@@ -71,9 +72,6 @@
       <button class="tab-btn" data-tab="developing">[ DEVELOPING ]</button>
     </nav>
 
-    <!-- DIVIDER -->
-    <div class="terminal-divider">================================================================================</div>
-
     <!-- PAGE CONTENT -->
     <main id="page-content">
 
@@ -81,15 +79,13 @@
       <section id="tab-home" class="tab-section active">
         <div class="glitch-name" data-text="TIGRANIKO">TIGRANIKO</div>
         <div class="home-subtitle">SYSTEMS ANALYST / SECURITY OPERATIVE / DEVELOPER</div>
-        <div class="terminal-divider short">——————————————————————————————</div>
         <div class="home-bio">
           <p class="type-line">&gt; DESIGNATION: <span class="hl">TIGRANIKO</span></p>
           <p class="type-line">&gt; SPECIALIZATION: <span class="hl">CYBERSECURITY // SYSTEMS HARDENING // DEVELOPMENT</span></p>
           <p class="type-line">&gt; STATUS: <span class="hl blink-slow">OPERATIONAL ●</span></p>
         </div>
-        <div class="terminal-divider short">——————————————————————————————</div>
         <div class="home-intro-text">
-          <p>Welcome to my secure terminal interface. This dossier contains verified credentials,experience, and active project info. Navigate via the tabs above to access sections.</p>
+          <p>Welcome to my portfolio. This  contains verified credentials, experience, and active project info. Navigate via the tabs above to access sections.</p>
         </div>
         <div class="home-stats-grid">
           <div class="stat-card">
@@ -115,15 +111,9 @@
 
         <div class="cert-grid">
           <div class="cert-card">
-            <div class="cert-icon">☰</div>
+            <div class="cert-icon">◈</div>
             <div class="cert-name">CompTIA A+</div>
             <div class="cert-desc">Core hardware, software, and IT support fundamentals. Validates ability to troubleshoot, configure, and maintain IT infrastructure across platforms.</div>
-            <div class="cert-badge">VERIFIED</div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon">⬡</div>
-            <div class="cert-name">CompTIA Network+</div>
-            <div class="cert-desc">Networking concepts, infrastructure, operations, security, and troubleshooting. Covers TCP/IP, protocols, routing, switching, and network defense.</div>
             <div class="cert-badge">VERIFIED</div>
           </div>
           <div class="cert-card">
@@ -131,16 +121,21 @@
             <div class="cert-name">CompTIA Security+</div>
             <div class="cert-desc">Cybersecurity baseline — threat management, cryptography, identity management, network security, and risk mitigation. DoD 8570 compliant baseline certification.</div>
             <div class="cert-badge">VERIFIED</div>
+          </div>          
+          <div class="cert-card">
+            <div class="cert-icon">◈</div>
+            <div class="cert-name">CompTIA Network+</div>
+            <div class="cert-desc">Networking concepts, infrastructure, operations, security, and troubleshooting. Covers TCP/IP, protocols, routing, switching, and network defense.</div>
+            <div class="cert-badge">VERIFIED</div>
           </div>
           <div class="cert-card">
-            <div class="cert-icon">⬧</div>
+            <div class="cert-icon">◈</div>
             <div class="cert-name">CompTIA CySA+</div>
             <div class="cert-desc">Cybersecurity Analyst certification. Focuses on threat intelligence, vulnerability management, incident response, and security operations center (SOC) methodologies.</div>
             <div class="cert-badge">VERIFIED</div>
           </div>
         </div>
 
-        <div class="terminal-divider short">——————————————————————————————</div>
         <div class="exp-category-label">[ FIELD OPERATIONS — COMPETITION RECORD ]</div>
 
         <div class="exp-card">
@@ -237,7 +232,6 @@
 
     <!-- FOOTER -->
     <footer id="site-footer">
-      <div class="terminal-divider">================================================================================</div>
       <div id="footer-text">&gt; TIGRANIKO TERMLINK ACTIVE &nbsp;|&nbsp; ALL RIGHTS RESERVED 2075 &nbsp;|&nbsp; NODE: TIGRANIKO-01</div>
     </footer>
   </div>
